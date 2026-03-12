@@ -1,6 +1,6 @@
 {
   "name": "generate-version-info",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate version information files for different environments",
   "bin": {
     "generate-version-info": "dist/bin/cli.js"
@@ -19,7 +19,7 @@
   },
   "keywords": [
     "version",
-    "versioning", 
+    "versioning",
     "deployment",
     "environment",
     "cli"
