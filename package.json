@@ -1,7 +1,7 @@
 {
   "name": "generate-version-info",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Generate version information files for different environments",
   "bin": {
     "generate-version-info": "dist/bin/cli.js"
   },
@@ -9,22 +9,23 @@
   "types": "dist/src/index.d.ts",
   "files": [
     "dist/",
-    "src/",
-    "bin/",
-    "config/",
-    "tsconfig.json",
-    "README.md"
+    "config/"
   ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
     "clean": "rm -rf dist",
     "prepublishOnly": "pnpm run build",
-    "postinstall": "pnpm run build",
     "test": "echo 'No tests yet'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "version",
+    "versioning", 
+    "deployment",
+    "environment",
+    "cli"
+  ],
+  "author": "Marcelo Bueno Martinez <marcelo.bueno.martinez@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
