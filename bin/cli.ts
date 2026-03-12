@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import path from "path";
 import { generateVersion } from "../src/index";
 
 async function main() {
@@ -11,10 +12,19 @@ async function main() {
   }
 
   try {
-    await generateVersion(envName);
+    console.log(`📋 Generating version file for environment: ${envName}`);
+    
+    // For local testing, use the local config file (go up from dist/bin to root)
+    const localConfigPath = path.join(__dirname, "../../config/default.json");
+    
+    const result = await generateVersion(envName, {
+      configPath: localConfigPath
+    });
     console.log("✅ Version file generated successfully");
+    console.log("📄 Generated version info:", JSON.stringify(result, null, 2));
   } catch (error) {
     console.error("❌ Failed:", error instanceof Error ? error.message : String(error));
+    console.error("💬 Error details:", error);
     process.exit(1);
   }
 }

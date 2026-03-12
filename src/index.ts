@@ -48,7 +48,7 @@ const detectEnvironmentType = (envName: string, config: ScriptConfig, appName: s
 
 export async function generateVersion(envName: string, options: VersionConfig = {}): Promise<VersionInfo> {
   // Default paths relative to current working directory
-  const configPath = options.configPath || path.join(process.cwd(), "node_modules/@your-username/generate-version-json/config/default.json");
+  const configPath = options.configPath || path.join(process.cwd(), "node_modules/generate-version-info/config/default.json");
   const packageJsonPath = options.packageJsonPath || path.join(process.cwd(), "package.json");
   const outputPath = options.outputPath || path.join(process.cwd(), "version.json");
 
