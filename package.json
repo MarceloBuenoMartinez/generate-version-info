@@ -2,7 +2,16 @@
   "name": "generate-version-info",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "bin": {
+    "generate-version-info": "dist/bin/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "config/",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
@@ -12,7 +21,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarceloBuenoMartinez/generate-version-info.git"
+  },
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "commander": "^14.0.3"
