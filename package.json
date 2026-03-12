@@ -9,7 +9,10 @@
   "types": "dist/src/index.d.ts",
   "files": [
     "dist/",
+    "src/",
+    "bin/",
     "config/",
+    "tsconfig.json",
     "README.md"
   ],
   "scripts": {
