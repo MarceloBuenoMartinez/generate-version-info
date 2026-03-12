@@ -1,4 +1,0 @@
-{
-  "version": "1.0.0",
-  "regularEnvironments": ["test", "staging", "preprod", "prod"]
-}

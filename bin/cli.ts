@@ -1,25 +1,11 @@
 #!/usr/bin/env node
-import path from "path";
 import { generateVersion } from "../src/index";
 
 async function main() {
-  const envName = process.argv[2];
-  
-  if (!envName) {
-    console.error("Error: Environment name is required");
-    console.error("Usage: generate-version-json <env-name>");
-    process.exit(1);
-  }
-
   try {
-    console.log(`📋 Generating version file for environment: ${envName}`);
+    console.log("📋 Generating version file...");
     
-    // For local testing, use the local config file (go up from dist/bin to root)
-    const localConfigPath = path.join(__dirname, "../../config/default.json");
-    
-    const result = await generateVersion(envName, {
-      configPath: localConfigPath
-    });
+    const result = await generateVersion();
     console.log("✅ Version file generated successfully");
     console.log("📄 Generated version info:", JSON.stringify(result, null, 2));
   } catch (error) {
